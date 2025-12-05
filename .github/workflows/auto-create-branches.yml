@@ -1,9 +1,13 @@
 # ============================================
 # 自動で dev / qa ブランチを作成するワークフロー
 # （テンプレートから作成された新規リポジトリで使用）
+# （github-actions[bot] に Push 権限付与済み）
 # ============================================
 
 name: Auto Create Branches   # ワークフロー名
+
+permissions:
+  contents: write            # ブランチ作成・push に必須
 
 on:
   workflow_dispatch:         # 手動実行トリガー
